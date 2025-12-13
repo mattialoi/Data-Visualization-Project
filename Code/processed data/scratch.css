@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+
+/* VARIABLE INSTANTIATION FOR COLOURS AND FONT DEFAULTS */
+:root {
+    /* FONT DEFAULTS */
+    --FF: "Ubuntu", sans-serif;
+    --FFP: "Ubuntu", sans-serif;
+    --FW: 400;
+    --FS: 1.2rem;
+
+    /* COLOURS (Aggiornati) */
+    --BGCOLOR: #141810;      /* SFONDO: Nero/Verde Foresta (Terra profonda) */
+    --BGTEXT: #2F3429;       /* SFONDO SCURO SECONDARIO: Verde Oliva scuro */
+    --TEXTCOLOR: #F0EFE3;    /* TESTO: Bianco Crema/Riso (Ottima leggibilità) */
+    --HEADERCOLOR: #FFC94A;  /* TITOLI 1: Oro Chiaro / Giallo Riso (Raccolto luminoso) */
+    --HEADERCOLOR2: #E8702A; /* TITOLI 2: Arancione Bruciato / Terracotta (Terra secca) */
+    --ACCENTCOLOR1: #F0A300; /* ACCENTO PRINCIPALE (SOSTITUITO): Oro Intenso / Ambra Profonda (Potenza, Raccolto d'oro) */
+    --ACCENTCOLOR2: #447C14; /* ACCENTO SECONDARIO: Verde Bosco / Giada (Crescita e Natura) */
+    --VISUALISATION: #224857; /* SFONDO VISUALIZZAZIONE: Blu Acqua / Petrolio Scuro (Contrasto freddo e pulito) */
+
+}
+
+/* GENERAL RESETS */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* GENERAL RULES */
+html {
+    line-height: 150%;
+    font-family: var(--FF);
+    font-weight: var(--FW);
+    font-size: var(--FS);
+    color: var(--TEXTCOLOR);
+    background-color: var(--BGCCOLOR);
+}
+
+body {
+    padding: 0;
+    background-color: var(--BGCOLOR);
+    min-height: 100vh;
+    background-image: url('risaie-in-cina.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header {
+    color: var(--BGCOLOR);
+    z-index: 2;
+    top: 0;
+    width: 100vw;
+    height: 4.5rem;
+    display: flex;
+    flex-direction: row;
+    gap: 25vw;
+    background-color: var(--ACCENTCOLOR1);
+    align-items: center;
+    justify-content: center;
+}
+
+header a {
+    color: var(--BGCOLOR)
+}
+
+header h5 {
+    font-size: 1.2rem;
+}
+
+header .info {
+    font-size: 0.9rem;
+}
+
+header ul li {
+    list-style: none;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 2.5rem;
+    font-size: 1.2rem;
+}
+
+footer {
+    width: 100vw;
+    background-color: var(--ACCENTCOLOR1);
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0.8rem;
+    color: var(--BGCOLOR);
+    padding-bottom: 0.7rem;
+}
+
+footer p, footer a {
+    color: var(--BGCOLOR);
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+footer h6 {
+    color: var(--ACCENTCOLOR2);
+    margin-bottom: 0;
+    display: inline;
+    font-weight: 500;
+}
+
+.no-break {
+    display: inline;
+}
+
+
+main {
+    background-color: #1d1f23f3;
+    font-size: var(--FS);
+    margin: 0 5% 0 5%;
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+    padding-inline: 10%;
+    min-height: 72vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+}
+
+p, p li {
+    font-family: var(--FFP);
+    color: var(--TEXTCOLOR);
+    padding-bottom: 1rem;
+}
+
+h1 {
+    color: var(--ACCENTCOLOR1);
+    font-size: 2.5rem;
+    line-height: 100%;
+}
+
+h2 {
+    margin-bottom: 1.2rem;
+    margin-top: 1rem;
+    color: var(--HEADERCOLOR2);
+    font-weight: 400;
+}
+
+h3 {
+    margin-bottom: 1.2rem;
+    margin-top: 2.5rem;
+    color: var(--HEADERCOLOR);
+
+}
+
+h4 {
+    padding-top: 1.5rem;
+    font-size: 1.5rem;
+    text-decoration: underline;
+    margin-bottom: 1.2rem;
+}
+
+h5 {
+    font-size: 1.1rem;
+}
+
+h6 {
+    font-size: 1rem;
+    font-weight: var(--FW);
+    color: var(--ACCENTCOLOR1);
+    margin-bottom: 1.5rem;
+}
+
+a {
+    color: var(--ACCENTCOLOR1)
+}
+
+li {
+    list-style: outside;
+}
+
+img {
+    max-width: 75%;
+    height: auto;
+    margin-left: 12.5%;
+}
+
+.images-source {
+    font-size: 0.8rem;
+}
+
+.header-img {
+    /* Abilita Flexbox sul contenitore */
+    display: flex;
+
+    /* Allinea il contenuto (l'immagine) orizzontalmente al centro */
+    justify-content: center;
+}
+
+.header-img img {
+    /* Assicurati che non ci siano margini strani e rimuovi 'display: block' se usi questo metodo */
+    margin: 0;
+    max-width: 100%;
+    height: auto;
+}
+
+.img-disclaimer {
+    font-size: 0.8rem;
+    opacity: 0.75;
+    list-style: inside;
+}
+
+.jump {
+    opacity: 0.8;
+    font-size: 0.95rem;
+}
+
+.no-break {
+    break-inside: avoid;
+}
+
+.visualisation {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--VISUALISATION);
+    border: 5px solid var(--BGCOLOR);
+    width: 250%;
+    height: auto;
+    margin-left: -75%;
+    padding: 10% 30%;
+    margin: 3rem -75% 3rem -75%;
+}
+
+.visualisation-1, .visualisation-2 {
+    display: grid;
+    gap: 1rem;
+}
+
+/* data-viz-borough */
+#viz1736536636017 {
+    width: 75%;
+    max-height:500px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+/* data-viz-driver-distractions */
+#viz1736536918455 {
+    min-height: 300px;
+    max-height: 400px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+
+/* data-viz-types-cars */
+#viz1736537049910 {
+    min-height: 300px;
+    max-height: 400px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+
+/* data-viz-day */
+#viz1736544023541 {
+    max-height:500px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+/* data-viz-month */
+#viz1736543997041 {
+    min-height: 300px;
+    max-height: 400px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+
+/* data-viz-year */
+#viz1736544069733 {
+    min-height: 300px;
+    max-height: 400px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+/* ================================================= */
+/* REGOLE FLEXBOX PER AFFIANCARE LE VISUALIZZAZIONI */
+/* ================================================= */
+
+/* 1. CONTAINER PRINCIPALE: Abilita il layout flessibile */
+.side-by-side-container {
+    display: flex;       /* La chiave per l'allineamento orizzontale */
+    flex-direction: row; /* Assicura che si dispongano in riga */
+    flex-wrap: wrap;     /* Fondamentale per la Responsività: fa andare i grafici a capo su schermi piccoli */
+    gap: 20px;           /* Spazio di 20px tra le due colonne */
+    width: 100%;         /* Occupa tutta la larghezza disponibile nel suo genitore (il tag 'main') */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* 2. CONTENITORI INDIVIDUALI: Definiscono la larghezza e il comportamento di ciascun grafico */
+.chart-column {
+    /* flex-grow: 1, flex-shrink: 1, flex-basis: 48% */
+    flex: 1 1 48%;       /* Assegna il 48% della larghezza come base (48%+48% + 4% di gap/margini = 100%) */
+
+    min-width: 300px;    /* Opzionale: impedisce che il grafico diventi troppo stretto su schermi molto piccoli */
+
+    /* Regole estetiche (adattate alla tua palette) */
+    background-color: var(--BGTEXT); /* Colore di sfondo leggermente diverso per i box dei grafici */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* 3. STILI PER IL CONTENUTO INTERNO (Flourish) */
+/* Rimuoviamo l'altezza fissa se i grafici Flourish la gestiscono internamente,
+   ma assicuriamo che la larghezza sia corretta. */
+.flourish-embed {
+    width: 100%;
+    /* Flourish gestisce l'altezza automaticamente per mantenere l'aspect ratio */
+    height: auto;
+}
+
+/* 4. STILE AGGIUNTIVO PER IL TITOLO CHE ABBIAMO INSERITO */
+.chart-title {
+    color: var(--HEADERCOLOR);
+    text-align: center;
+    font-size: 1.1rem;
+    padding-bottom: 10px;
+}
+/*
+select {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+
+}
+*/
