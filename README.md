@@ -38,7 +38,7 @@ Then we created the 'Year' column (short format), calculated the total productio
 - Bar Chart Race / Line Chart
 
 ### World Population by Country
-Used to highlight Chiina's population rapid growth in comparison to other countries. This, with the knowledge of how devastating the Great Chinese Famine in 1959-1961 was, is where our research question came from: "How was China able to feed its population?".
+Used to highlight China's population rapid growth in comparison to other countries. This, with the knowledge of how devastating the Great Chinese Famine in 1959-1961 was, is where our research question came from: "How was China able to feed its population?".
 <div class="flourish-embed flourish-map" data-src="visualisation/27051099"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/27051099/thumbnail" width="100%" alt="map visualization" /></noscript></div>
   
 
