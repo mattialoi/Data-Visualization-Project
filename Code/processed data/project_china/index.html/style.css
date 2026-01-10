@@ -36,14 +36,14 @@ html {
     font-weight: var(--FW);
     font-size: var(--FS);
     color: var(--TEXTCOLOR);
-    background-color: var(--BGCCOLOR);
+    background-color: var(--BGCOLOR);
 }
 
 body {
     padding: 0;
     background-color: var(--BGCOLOR);
     min-height: 100vh;
-    background-image: url('risaie-in-cina.jpg');
+    background-image: url("risaie-in-cina.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -111,7 +111,13 @@ footer h6 {
     display: inline;
     font-weight: 500;
 }
-
+footer ul {
+    list-style: none; /* Rimuove il pallino nero */
+    padding: 0;       /* Rimuove lo spazio extra a sinistra */
+    margin: 0;
+    display: flex;    /* Mette i link in riga */
+    gap: 20px;        /* Spazio tra i link */
+}
 .no-break {
     display: inline;
 }
@@ -228,11 +234,9 @@ img {
     flex-direction: column;
     background-color: var(--VISUALISATION);
     border: 5px solid var(--BGCOLOR);
-    width: 250%;
-    height: auto;
-    margin-left: -75%;
-    padding: 10% 30%;
-    margin: 3rem -75% 3rem -75%;
+    width: 100%;        /* CAMBIA DA 250% A 100% */
+    margin: 2rem 0;     /* RIMUOVI I MARGINI NEGATIVI (-75%) */
+    padding: 20px;
 }
 
 .visualisation-1, .visualisation-2 {
@@ -440,3 +444,22 @@ select {
 
 }
 */
+.grafico-container {
+    width: 100%;       /* Occupa tutta la larghezza disponibile */
+    min-height: 500px; /* Forza un'altezza minima per non far tagliare il grafico */
+    margin: 20px 0;    /* Aggiunge un po' di spazio sopra e sotto */
+    overflow: visible; /* Assicura che nulla venga nascosto */
+}
+
+.flourish-embed {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 600px !important; /* Questo impedisce il taglio verticale */
+    display: block !important;
+}
+
+/* Rimuovi eventuali limiti dal contenitore genitore */
+.grafico-container {
+    height: auto !important;
+    overflow: visible !important;
+}

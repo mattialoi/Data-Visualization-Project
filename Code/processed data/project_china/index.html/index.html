@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NYC: New York Crashes</title>
+
+
+  <link rel="stylesheet" href='style.css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<div id="overlay"></div>
+<div style="padding:20px"
+</div>
+<header>
+        <span class="info">
+            <ul>
+                <li>Final group project</li>
+                <li>SUPSI 2025-26</li>
+                <li><a href="https://dataviz-supsi.github.io/2024/">Data Visualization Course</a>, C-D3202E</li>
+            </ul>
+        </span>
+</header>
+<body>
+<main>
+  <h1>China: The Green Evolution</h1>
+  <h2>The country great ability to feed its population</h2>
+  <h5>Anna Dell'Aquila, Antonio Falcao, Mattia Loi</h5>
+
+  <div class="jump">
+
+    Paragraphs:
+    <br />
+    <a class="no-break" href="#global-overview">The Growing Demand</a>,
+    <a class="no-break" href="#land-use-efficiency">The Efficiency Miracle</a>,
+    <a class="no-break" href="#scatter">The Mechanics of Growth</a>,
+    <a class="no-break" href="#fertilizers">The Fuel of the Green Revolution</a>
+
+  </div>
+  <h3 id="global-overview">The Growing Demand</h3>
+  <p>With a rise in population, as we see in the timelapse below, the whole world faced the same problem: feeding its inhabitants.<br/>
+    Since 1961, the global population has more than doubled, but this growth isn't distributed evenly. We need to establish where the mouths are located to understand the pressure on local versus global food systems.<br/>
+    We can spot that China, having had the biggest growth amidst all, had to quickly think of a solution to face this challenge.<br/>
+  <div class="flourish-embed flourish-map" data-src="visualisation/27051099"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/27051099/thumbnail" width="100%" alt="map visualization" /></noscript></div>
+  <p>In 1961, China was still a country marked by hunger: the population was growing fast, but the fields were not enough. In sixty years, however, the way the country provides food for its people has changed radically.<br/>
+    This project aims to offer viewers an insight into China’s extraordinary agricultural evolution and its powerful strategies for confronting one of humanity’s greatest challenge: global hunger.
+  <br/><a href="protocol.html">Protocol</a>
+  <br/><a href="C:\Users\anna_\OneDrive\Desktop\Data-Visualization-Project\Code\processed data\world_data_elab" download="world_population_dataset">
+   Download dataset (CSV)
+</a>
+    <h3 id="land-use-efficiency">The Efficiency Miracle</h3>
+  <p>We focus here on cereal production: cereals are a core source of energy in most diets, accounting for over half of total caloric intake in many countries, and they also occupy the majority of global arable land by area.<br/>
+    With that being said, in the graph below the indices 'Production', 'Yield' and 'Area Harvested' refer to cereals.
+  </p>
+  <div class="flourish-embed flourish-chart" data-src="visualisation/26807022"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/26807022/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
+  <p>Our increased output of cereal is not due to land expansion, which has played a very small role. Instead, the success is rooted in efficiency: yields have nearly tripled since 1961. This crucial improvement means that despite overall production growth, we now use less land per person than was required fifty years ago.</p>
+  <p>The Green Revolution-a crucial period for global agriculture beginning in the mid-20th century-marked the widespread transition from traditional to industrial practices in the developing world. This transformation was powered by the broad adoption of a package of new technologies, including:</p>
+  <ul>
+    <li>High-yielding rice, wheat, and maize seed varieties.</li>
+    <li>Chemical inputs, such as fertilizers and pesticides.</li>
+    <li>New irrigation systems.</li>
+    <li>Farm mechanization.</li>
+  </ul>
+  <p>This technological adoption brought a significant shift, though its implementation and success varied from country to country.<br/>
+    We will focus on China, considering its big growth.
+  </p>
+  <br/><a href="protocol2.html">Protocol</a>
+  <br/><a href="C:\Users\anna_\OneDrive\Desktop\Data-Visualization-Project\Code\processed data\indexed_and_yoy_cereal_data" download="yoy_change_cereal">
+   Download dataset (CSV)
+</a>
+  <h3 id="scatter">The Mechanics of Growth</h3>
+  <p>We used the Hans Rosling-style scatterplot to show the momentum of this change. This visualizes the relationship between how much we plant (Area) and how much we actually get (Production) over time, driven by technology (Yield).</p>
+  <div class="flourish-embed flourish-scatter" data-src="visualisation/27142656"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/27142656/thumbnail" width="100%" alt="scatter visualization" /></noscript></div>
+
+  <p>We aim to illustrate changes in production volume and shifts in cropping typology.<br/>
+    The graph reveals a clear move toward vegetable cultivation. This shift is driven by advances in crop genetics, irrigation, greenhouse farming, and agricultural inputs (fertilizers, pest management), which have boosted vegetable productivity and made farming vegetables more economically viable, encouraging farmers to allocate more land to vegetables.<br/>
+  <p>To drive our point home, with the use of the bar charts below it is easier for us to compare the starting line (1961) with our current reality (2023).
+  </p>
+
+  <div class="slider-container">
+    <div class="slides">
+
+      <div class="slide" data-slide-index="0">
+        <div class="chart-title">Initial stage</div>
+        <div class="flourish-embed flourish-hierarchy" data-src="visualisation/26784114">
+          <script src="https://public.flourish.studio/resources/embed.js"></script>
+          <noscript><img src="https://public.flourish.studio/visualisation/26784114/thumbnail" width="100%"
+                         alt="Initial stage visualization" /></noscript>
+        </div>
+      </div>
+
+      <div class="slide" data-slide-index="1">
+        <div class="chart-title">Final stage</div>
+        <div class="flourish-embed flourish-hierarchy" data-src="visualisation/26788354">
+          <script src="https://public.flourish.studio/resources/embed.js"></script>
+          <noscript><img src="https://public.flourish.studio/visualisation/26788354/thumbnail" width="100%"
+                         alt="Final stage visualization" /></noscript>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="slider-wrapper">
+
+    <div class="slider-controls">
+      <button class="nav-button prev" onclick="moveSlide(-1)">&#10094;</button>
+      <button class="nav-button next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+
+
+  </div>
+
+  <script>
+    let currentSlide = 0;
+    const slidesContainer = document.querySelector('.slides');
+    const totalSlides = document.querySelectorAll('.slide').length;
+
+    /**
+     * Sposta il carosello in base alla direzione (+1 per avanti, -1 per indietro).
+     */
+    function moveSlide(direction) {
+      currentSlide += direction;
+
+      // Gestione del wrapping: se si supera, torna all'inizio o alla fine
+      if (currentSlide >= totalSlides) {
+        currentSlide = 0;
+      } else if (currentSlide < 0) {
+        currentSlide = totalSlides - 1;
+      }
+
+      // Calcola lo spostamento orizzontale in percentuale (es. 0%, -100%)
+      const offset = -currentSlide * 100;
+
+      // Applica la trasformazione CSS per scorrere la vista
+      slidesContainer.style.transform = `translateX(${offset}%)`;
+    }
+  </script>
+  <p>It's much more evident now how the proportions of area and production have changed, especially for cereals, which are considered the main resource for food worldwide.<br/>
+    Indeed, we can easily spot a big gap between production and harvested area for this crop. From 1961 onward, production grew by over five times, while the harvested area rose by less than 11%, signaling strong yield improvements.</p>
+  </p>
+  <br/><a href="protocol3.html">Protocol</a>
+  <br/><a href="C:\Users\anna_\OneDrive\Desktop\Data-Visualization-Project\Code\processed data\analyzed_agricultural_data" download="analyzed_agricultural_data">
+   Download dataset (CSV)
+</a>
+  <h3 id="fertilizers">The Fuel of the Green Revolution</h3>
+  <p>Introduction on fertilizers.</p>
+  <div class="flourish-embed flourish-bar-chart-race" data-src="visualisation/27145742"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/27145742/thumbnail" width="100%" alt="bar-chart-race visualization" /></noscript></div>
+ <p>Comment and conclusions</p>
+ <br/><a href="protocol4.html">Protocol</a>
+  <br/><a href="C:\Users\anna_\Downloads\fertilizer-production-by-nutrient-type-npk" download="fertilizer-production-by-nutrient-type-npk">
+   Download dataset (CSV)
+</a>
+
+</main></body>
+<div>
+ <footer>
+        <ul class="footer-nav">
+            <li><a href="index.html">Home</a></li>
+        </ul>
+    </footer>
+</div>
+</html>
