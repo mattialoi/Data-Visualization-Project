@@ -1,55 +1,78 @@
-SUPSI 2024-25  
+SUPSI 2025-26 
 Data Visualization course, C-D3202E 
 Teacher Giovanni Profeta
 
 
 # Project title
-Authors: [Author n. 1](https://github.com/giovannipro), [Author n. 2](https://github.com/giovannipro), [Author n. 3](https://github.com/giovannipro)
+Authors: [Author n. 1]Anna Dell'Aquila, [Author n. 2]Antonio Falcao, [Author n. 3]Mattia Loi
 
-[Project title](https://dataviz-supsi.github.io/2024/template/)
+[China: The Green Evolution](https://dataviz-supsi.github.io/2025/)
 
 
 ## Abstract
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Congue eu consequat ac felis donec. Nisi est sit amet facilisis magna etiam tempor. Nisl nisi scelerisque eu ultrices vitae. Id aliquet lectus proin nibh nisl. Urna nec tincidunt praesent semper feugiat nibh. Imperdiet dui accumsan sit amet nulla facilisi morbi. Aliquet enim tortor at auctor urna nunc. Id cursus metus aliquam eleifend mi. Ultricies lacus sed turpis tincidunt id aliquet risus feugiat in. Odio morbi quis commodo odio aenean sed. Turpis cursus in hac habitasse. Sed enim ut sem viverra aliquet eget sit. Iaculis at erat pellentesque adipiscing commodo. Et pharetra pharetra massa massa ultricies mi quis hendrerit dolor. At tempor commodo ullamcorper a lacus vestibulum sed arcu. Ipsum faucibus vitae aliquet nec ullamcorper sit. Tempus quam pellentesque nec nam aliquam sem et tortor. Turpis egestas sed tempus urna et pharetra pharetra massa. Ridiculus mus mauris vitae ultricies leo integer malesuada nunc vel.
+This project explores China's extraordinary agricultural transformation from 1961 to the present. Through visual analysis, we document how the nation managed to feed an exploding population without a proportional increase in land use. This phenomenon, known as the "Great Decoupling," reveals the critical role of nutrient intensification and increased agricultural yields in global food security.
 
 
 ## Introduction
-Dolor sit amet consectetur adipiscing elit duis tristique. Sociis natoque penatibus et magnis dis parturient montes nascetur. Est sit amet facilisis magna. Tellus rutrum tellus pellentesque eu. Dictum sit amet justo donec enim. Aliquam malesuada bibendum arcu vitae elementum curabitur vitae. Sed faucibus turpis in eu mi bibendum neque egestas congue. Tellus in metus vulputate eu scelerisque felis imperdiet proin. Dolor magna eget est lorem ipsum dolor. Sit amet mattis vulputate enim nulla. Elit pellentesque habitant morbi tristique senectus et. Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare massa.
+Faced with unprecedented demographic pressure, China had to reinvent its food system. The challenge was not just to produce more food, but to do so efficiently. This data story analyzes the shift from agriculture based on territorial expansion to a technological and chemical evolution ("The Green Evolution"), highlighting how production growth has been driven by yields rather than cultivated area.
 
 
 ## Data sources
-Facilisis magna etiam tempor orci eu. Felis donec et odio pellentesque diam volutpat commodo. Dis parturient montes nascetur ridiculus mus mauris vitae. Nisi vitae suscipit tellus mauris a diam maecenas sed enim. Accumsan sit amet nulla facilisi. Ultricies leo integer malesuada nunc vel risus. Est lorem ipsum dolor sit. Ultrices neque ornare aenean euismod elementum nisi. Ultrices mi tempus imperdiet nulla malesuada pellentesque elit eget gravida. Placerat duis ultricies lacus sed turpis tincidunt id aliquet. Arcu dictum varius duis at consectetur lorem donec massa sapien. Pellentesque habitant morbi tristique senectus. Turpis massa sed elementum tempus egestas sed sed risus pretium. Eros donec ac odio tempor orci. Pellentesque id nibh tortor id aliquet lectus. Risus feugiat in ante metus dictum at. Quam pellentesque nec nam aliquam sem et tortor consequat id. Feugiat nibh sed pulvinar proin gravida hendrerit lectus a. Sit amet dictum sit amet justo donec enim.
+The data used for this analysis comes primarily from **FAOSTAT** (Food and Agriculture Organization of the United Nations), which provides accurate historical series on production, yields, and land use. Data regarding fertilizer production was extracted from international datasets monitoring nutrient input (NPK) in the soil.
 
-[Main datasource](https://www.kaggle.com/datasets/zafarali27/netflix-movies-and-tv-shows)
+[Main datasource](https://www.fao.org/faostat/en/#data/QCL): "Production_Crops_Livestock_E_All_Data/Production_Crops_Livestock_E_All_Data_NOFLAG.csv".
 
 ## Data pre-processing
-Nunc consequat interdum varius sit amet mattis vulputate. Vehicula ipsum a arcu cursus vitae congue. Odio ut sem nulla pharetra. Accumsan lacus vel facilisis volutpat est velit egestas dui id. Quisque egestas diam in arcu cursus. Eget nulla facilisi etiam dignissim diam. Aenean sed adipiscing diam donec adipiscing tristique. Porttitor massa id neque aliquam. Sem viverra aliquet eget sit amet tellus cras. Scelerisque eu ultrices vitae auctor eu augue ut lectus. Nunc aliquet bibendum enim facilisis gravida neque convallis a. Lacus sed turpis tincidunt id aliquet risus feugiat.
+The original data in .csv format were cleaned and filtered using Python (Pandas) to isolate the focus on China. 
+We filtered for 'Production' (Element Code 5510) and unit 't' (tonnes). This isolates the data representing the physical quantity produced.
+We excluded animal-derived items using keywords (case-insensitive). 
+Then we created the 'Year' column (short format), calculated the total production (sum across all years) and grouped by Item. We calculated the total production for each record (Area/Item/Element combination) and selected the top 15 plant productions, creating a new dataset further processed to analyze China in particular (i.e. we calculated percentage changes relative to the base year (1961) to normalize the different scales of measurement between population (billions), production (tons), and area (hectares)). 
 
-
-```Python
-import pandas as pd
-
-df = pd.read_csv('file.tsv', sep='\t')
-print(df.columns)
-```
+**Note**: the protocols using the FAOSTAT dataset refer to the already modified original dataset "Production_Crops_Livestock_E_All_Data/Production_Crops_Livestock_E_All_Data_NOFLAG.csv" to which we applied the modifications cited above.
 
 ## Data visualizations
-Sed enim ut sem viverra aliquet eget sit. Iaculis at erat pellentesque adipiscing commodo. Et pharetra pharetra massa massa ultricies mi quis hendrerit dolor. At tempor commodo ullamcorper a lacus vestibulum sed arcu. Ipsum faucibus vitae aliquet nec ullamcorper sit. Tempus quam pellentesque nec nam aliquam sem et tortor. Turpis egestas sed tempus urna et pharetra pharetra massa. Ridiculus mus mauris vitae ultricies leo integer malesuada nunc vel.
+- Heat World Map
+- Line Chart
+- Hans-Rosling Scatter Plot
+- Horizontally Stacked Bar Chart
+- Bar Chart Race / Line Chart
 
-### Title of the data visualization n. 1 
-Accumsan lacus vel facilisis volutpat est velit egestas dui id. Quisque egestas diam in arcu cursus. Eget nulla facilisi etiam dignissim diam. Aenean sed adipiscing diam donec adipiscing tristique. Porttitor massa id neque aliquam. Sem viverra aliquet eget sit amet tellus cras. Scelerisque eu ultrices vitae auctor eu augue ut lectus.
+### World Population by Country
+Used to highlight Chiina's population rapid growth in comparison to other countries. This, with the knowledge of how devastating the Great Chinese Famine in 1959-1961 was, is where our research question came from: "How was China able to feed its population?".
+<div class="flourish-embed flourish-map" data-src="visualisation/27051099"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/27051099/thumbnail" width="100%" alt="map visualization" /></noscript></div>
+  
 
-[<img src="assets/images/03.png" width="800" alt="Placeholder image">]()
+### Global Indices Change (1961-2023)
+Visual representation of area harvested, production, yield (focus on cereals) and global population.
+ <div class="flourish-embed flourish-chart" data-src="visualisation/26807022"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/26807022/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
+ 
 
-### Title of the data visualization n. 2
-Accumsan lacus vel facilisis volutpat est velit egestas dui id. Quisque egestas diam in arcu cursus. Eget nulla facilisi etiam dignissim diam. Aenean sed adipiscing diam donec adipiscing tristique. Porttitor massa id neque aliquam. Sem viverra aliquet eget sit amet tellus cras. Scelerisque eu ultrices vitae auctor eu augue ut lectus.
+### Correlation between Land Use and Production across major Chinese crop categories
+Scatter plot that shows production (arising) oon the x axis and area harvested on the y axis. The size of the circles are proportional to the yield of each item overtime.
+<div class="flourish-embed flourish-scatter" data-src="visualisation/27142656"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/27142656/thumbnail" width="100%" alt="scatter visualization" /></noscript></div>
 
-[<img src="assets/images/04.png" width="800" alt="Placeholder image">]()
+### Production and are harvested for different crops (1961 vs 2023)
+Bar charts showing change in proportion between area harvested and production. The sums on the right of each item are indicative (units are not to be taken in consideration) and are used to show the magnitudes better.
+<div class="flourish-embed flourish-hierarchy" data-src="visualisation/26784114">
+          <script src="https://public.flourish.studio/resources/embed.js"></script>
+          <noscript><img src="https://public.flourish.studio/visualisation/26784114/thumbnail" width="100%"
+                         alt="Initial stage visualization" /></noscript>
+        </div>
+<div class="flourish-embed flourish-hierarchy" data-src="visualisation/26788354">
+          <script src="https://public.flourish.studio/resources/embed.js"></script>
+          <noscript><img src="https://public.flourish.studio/visualisation/26788354/thumbnail" width="100%"
+                         alt="Final stage visualization" /></noscript>
+        </div>
 
-
+### Fertilizer Production [tonnes] by nutrient type
+Shows the rise in the usage of different types of fertilizers (K2O=potash, P2O5=phosphate, N=nitrogen).
+<div class="flourish-embed flourish-bar-chart-race" data-src="visualisation/27145742"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/27145742/thumbnail" width="100%" alt="bar-chart-race visualization" /></noscript></div>
+ 
 ## Key findings
-Accumsan lacus vel facilisis volutpat est velit egestas dui id. Quisque egestas diam in arcu cursus. Eget nulla facilisi etiam dignissim diam. Aenean sed adipiscing diam donec adipiscing tristique. Porttitor massa id neque aliquam. Sem viverra aliquet eget sit amet tellus cras. Scelerisque eu ultrices vitae auctor eu augue ut lectus. Nunc aliquet bibendum enim facilisis gravida neque convallis a. Lacus sed turpis tincidunt id aliquet risus feugiat.
+- Land Efficiency: China now produces over 500% more cereals than in 1961 using almost the same amount of land.
+- Nutrient Input: The production and use of NPK fertilizers have been the fundamental chemical engine for sustaining necessary yields.
+- Resilience: The "decoupling" between land and food is the key to future sustainability and the protection of China's natural ecosystems.
 
 ## Next steps
-Tellus rutrum tellus pellentesque eu. Dictum sit amet justo donec enim. Aliquam malesuada bibendum arcu vitae elementum curabitur vitae. Sed faucibus turpis in eu mi bibendum neque egestas congue. Tellus in metus vulputate eu scelerisque felis imperdiet proin. Dolor magna eget est lorem ipsum dolor. Sit amet mattis vulputate enim nulla. Elit pellentesque habitant morbi tristique senectus et.
+In the future, the project could expand by analyzing the environmental impact of this Green Evolution, such as water eutrophication due to excess fertilizer, and China's current transition toward smart and organic agriculture to reduce its chemical footprint. It would also be interesting to analyze which crop responded better to each type of fertilizer, which would be useful for agricultural analysis and improvement.
 
