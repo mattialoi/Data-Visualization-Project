@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
-
+html {
+    scroll-behavior: smooth;
+}
 /* VARIABLE INSTANTIATION FOR COLOURS AND FONT DEFAULTS */
 :root {
     /* FONT DEFAULTS */
@@ -141,11 +143,15 @@ p, p li {
     color: var(--TEXTCOLOR);
     padding-bottom: 1rem;
 }
-
-h1 {
-    color: var(--ACCENTCOLOR1);
-    font-size: 2.5rem;
-    line-height: 100%;
+#overlay h1 {
+    font-size: clamp(2.5rem, 8vw, 5rem); /* This makes it responsive: smaller on mobile, big on desktop */
+    font-weight: 800;
+    line-height: 1.1;           /* Keeps the words close together */
+    margin: 0.5rem 0 1.5rem 0;
+    color: #FFFFFF;             /* White text for the hero image */
+    text-transform: none;       /* Keeps your casing exactly as you wrote it */
+    letter-spacing: -1px;       /* Tightens the letters for a modern look */
+    text-shadow: 0 4px 15px rgba(0,0,0,0.6); /* Adds depth so it sits 'on top' of the image */
 }
 
 h2 {
@@ -157,9 +163,11 @@ h2 {
 
 h3 {
     margin-bottom: 1.2rem;
-    margin-top: 2.5rem;
-    color: var(--HEADERCOLOR);
-
+    margin-top: 2.5rem; /* Increased top margin to give the larger title more breathing room */
+    color: var(--TEXTCOLOR);
+    font-size: 2.2rem;   /* This makes the title significantly bigger */
+    line-height: 1.2;    /* Ensures that long, multi-line titles don't have too much space between lines */
+    font-weight: 700;    /* Makes the title bold to stand out against the body text */
 }
 
 h4 {
@@ -173,12 +181,14 @@ h5 {
     font-size: 1.1rem;
 }
 
-h6 {
-    font-size: 1rem;
-    font-weight: var(--FW);
-    color: var(--ACCENTCOLOR1);
-    margin-bottom: 1.5rem;
+#overlay h6 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--ACCENTCOLOR1); /* Your Gold color */
+    margin-bottom: 0;
 }
+
 
 a {
     color: var(--ACCENTCOLOR1)
@@ -451,7 +461,7 @@ select {
     overflow: visible; /* Assicura che nulla venga nascosto */
 }
 
-.flourish-embed {
+.flourish-embed {   
     width: 100% !important;
     height: auto !important;
     min-height: 600px !important; /* Questo impedisce il taglio verticale */
@@ -462,4 +472,168 @@ select {
 .grafico-container {
     height: auto !important;
     overflow: visible !important;
+}
+
+.highlight-box {
+    background-color: var(--BGTEXT);   /* Dark olive green background */
+    border-left: 5px solid var(--ACCENTCOLOR1); /* Gold accent stripe on the left */
+    padding: 20px 30px;
+    margin: 3rem 0;
+    border-radius: 4px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.highlight-box p {
+    color: var(--TEXTCOLOR);
+    font-size: 1.4rem;        /* Slightly larger than normal text */
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: 0;         /* Removes extra spacing inside the box */
+    padding-bottom: 0;
+    font-style: italic;
+    text-align: center;
+}
+.data-banner {
+    background-color: rgba(47, 52, 41, 0.9); /* Using your --BGTEXT with transparency */
+    border-top: 2px solid var(--ACCENTCOLOR1);
+    border-bottom: 2px solid var(--ACCENTCOLOR1);
+    padding: 30px 10%;
+    margin: 40px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.banner-item {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.stat-value {
+    display: block;
+    color: var(--ACCENTCOLOR1); /* Gold */
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.stat-label {
+    color: var(--TEXTCOLOR);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+
+.banner-divider {
+    height: 1px;
+    width: 50px;
+    background-color: var(--ACCENTCOLOR1);
+    margin: 10px 0;
+}
+
+.banner-conclusion {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--ACCENTCOLOR2); /* Growth Green */
+    margin: 0;
+    padding: 0;
+}
+
+/* Responsive adjustment for mobile */
+@media (min-width: 768px) {
+    .data-banner {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .banner-divider {
+        height: 50px;
+        width: 1px;
+    }
+}
+
+.hero-section {
+    position: relative;
+    width: 100%; /* Changed from 100vw to stay inside main container */
+    height: 80vh; 
+    background-image: linear-gradient(rgba(20, 24, 16, 0.7), rgba(20, 24, 16, 0.6)), 
+                      url("rice_colture.webp");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.hero-content {
+    text-align: center;
+    max-width: 800px;
+    padding: 20px;
+    z-index: 3;
+}
+
+.hero-section h6 {
+    color: var(--ACCENTCOLOR1);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.hero-section h1 {
+    font-size: 5rem; /* Larger, more impactful title */
+    color: #FFFFFF;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+.hero-description {
+    font-size: 1.3rem;
+    color: var(--TEXTCOLOR);
+    line-height: 1.6;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+.hero-scroll-indicator {
+    margin-top: 3rem;
+    color: var(--ACCENTCOLOR1);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-10px);}
+    60% {transform: translateY(-5px);}
+}
+/* Target the long title specifically */
+.long-title {
+    /* Use clamp: Min size 1.8rem, Preferred size 5vw, Max size 3rem */
+    font-size: clamp(1.8rem, 5vw, 3rem) !important; 
+    line-height: 1.2 !important;
+    max-width: 90%;
+    margin: 0 auto 1rem auto;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+    display: block; /* Ensures it doesn't try to sit next to other elements */
+}
+
+/* Adjust the subtitle underneath */
+.subtitle {
+    font-size: 1.5rem !important;
+    color: var(--ACCENTCOLOR1); /* Your Gold color */
+    text-transform: none;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+}
+
+/* Make the dark overlay even stronger for better readability */
+.hero-section {
+    background-image: linear-gradient(rgba(20, 24, 16, 0.75), rgba(20, 24, 16, 0.85)), 
+                      url("rice_colture.webp") !important;
 }
