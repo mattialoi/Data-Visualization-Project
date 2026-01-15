@@ -637,3 +637,36 @@ select {
     background-image: linear-gradient(rgba(20, 24, 16, 0.75), rgba(20, 24, 16, 0.85)), 
                       url("rice_colture.webp") !important;
 }
+
+.conclusion-callout {
+    position: relative;
+    padding: 40px 0;
+    margin: 4rem 0;
+    border-top: 1px solid var(--ACCENTCOLOR1); /* Gold line */
+    border-bottom: 1px solid var(--ACCENTCOLOR1); /* Gold line */
+    text-align: center;
+}
+
+/* Decorative quotation marks */
+.conclusion-callout::before {
+    content: "“";
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--BGCOLOR); /* Matches your site background to 'break' the line */
+    padding: 0 15px;
+    color: var(--ACCENTCOLOR1);
+    font-size: 3rem;
+    font-family: serif;
+}
+
+.conclusion-callout p {
+    color: var(--TEXTCOLOR);
+    font-size: 1.6rem; /* Larger than the question boxes */
+    line-height: 1.6;
+    font-weight: 300; /* Light weight for a modern, elegant look */
+    max-width: 80%;
+    margin: 0 auto;
+    font-style: italic;
+}
