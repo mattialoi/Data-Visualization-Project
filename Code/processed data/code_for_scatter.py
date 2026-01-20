@@ -1,7 +1,7 @@
 import pandas as pd
 import io
 
-# Copy the CSV content as a string
+
 csv_content = """Year,Item,Area harvested,Yield,Production
 1961,"Cereals, primary",90552841,1211,109659976
 1962,"Cereals, primary",89761512,1341.6,120421293
